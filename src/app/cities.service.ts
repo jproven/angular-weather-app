@@ -24,6 +24,10 @@ export class CitiesService {
     return this.cities;
   }
 
+  getCityAtHome() {
+    return this.cityAtHome;
+  }
+
   removeCity(city: any) {
     this.cities = this.cities.filter((c) => c.id !== city.id);
   }
