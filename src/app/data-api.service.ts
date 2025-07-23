@@ -8,7 +8,7 @@ import { environment } from '../environments/environment.local';
 export class DataApiService {
 
   private urlBase = "https://api.openweathermap.org/data/2.5/"
-  private urlSufix = "${environment.weatherApiKey}&units=metric"
+  private urlSufix = `&appid=${environment.weatherApiKey}&units=metric`
 
   constructor(private http:HttpClient) { }
 
