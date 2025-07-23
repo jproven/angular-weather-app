@@ -27,7 +27,7 @@ export class SearchComponent {
   }
 
   isAlreadyAdded(city: any) {
-    return this.citiesService.isAlreadyAdded(city)
+    return this.citiesService.isAlreadyAdded(city);
   }
 
   addCity(city: any) {
