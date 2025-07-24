@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CitiesService } from '../cities.service';
-import { DataApiService } from '../data-api.service';
-import { CountryCodePipe } from '../country-code.pipe';
+import { CitiesService } from '../services/cities.service';
+import { DataApiService } from '../services/data-api.service';
+import { CountryCodePipe } from '../pipes/country-code.pipe';
 
 @Component({
   selector: 'app-search',

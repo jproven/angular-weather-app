@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CityCardComponent } from '../components/city-card/city-card.component';
-import { CitiesService } from '../cities.service';
-import { DataApiService } from '../data-api.service';
+import { CitiesService } from '../services/cities.service';
+import { DataApiService } from '../services/data-api.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-manage',
-  imports: [FormsModule, CityCardComponent],
+  imports: [FormsModule, CityCardComponent ],
   templateUrl: './manage.component.html',
   styleUrl: './manage.component.css',
 })
