@@ -1,5 +1,5 @@
-<h2>Search cities</h2>
-<div class="input-group mb-3">
+<h2 class="mt-4">Search cities</h2>
+<div class="input-group mb-3 mt-3">
     <input #patternInput (keyup.enter)="searchByName(patternInput.value)" type="text" class="form-control" required
         placeholder="Write the name of a city">
     <button (click)="searchByName(patternInput.value)" class="btn btn-primary" type="button"

@@ -1,5 +1,17 @@
-City: {{ getCityAtHome().name }}
-Country: {{ getCityAtHome().sys.country | countryCode }}
-Temperature: {{ getCityAtHome().main.temp | temp }}
-Icon: 
-<img src="http://openweathermap.org/img/wn/{{getCityAtHome().weather[0].icon}}@2x.png">
+<div class="d-flex justify-content-center align-items-center mt-5">
+  <div class="card text-center p-4 shadow-sm" style="width: 280px; border-radius: 15px;">
+    <h5 class="card-title mb-3">Weather Info</h5>
+
+    <h3 class="mb-1">{{ getCityAtHome().name }}</h3>
+    <p class="text-muted mb-2">{{ getCityAtHome().sys.country | countryCode }}</p>
+
+    <img 
+      [src]="'http://openweathermap.org/img/wn/' + getCityAtHome().weather[0].icon + '@2x.png'" 
+      alt="Weather icon"
+      class="mb-2 mx-auto d-block"
+      style="width: 80px; height: 80px;"
+    />
+
+    <h2 class="fw-bold">{{ getCityAtHome().main.temp | temp }}</h2>
+  </div>
+</div>
