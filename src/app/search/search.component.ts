@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CitiesService } from '../cities.service';
 import { DataApiService } from '../data-api.service';
+import { CountryCodePipe } from '../country-code.pipe';
 
 @Component({
   selector: 'app-search',
-  imports: [],
+  imports: [ CountryCodePipe ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
