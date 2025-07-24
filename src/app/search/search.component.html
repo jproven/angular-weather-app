@@ -9,7 +9,7 @@
 <ul class="list-group">
     @for (result of getResults(); track $index) {
     <li class="list-group-item">
-        {{ result.name }} ({{ result.sys.country }})
+        {{ result.name }} ({{ result.sys.country | countryCode }})
         @if ( isAlreadyAdded(result) ) {
         <button type="button" class="btn btn-outline-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill"
