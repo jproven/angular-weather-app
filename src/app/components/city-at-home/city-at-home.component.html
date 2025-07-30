@@ -1,20 +1,15 @@
+@if (getCityAtHome()?.name) {
 <div class="position-relative d-flex justify-content-center align-items-center">
 
-  <div class="card text-center p-4 shadow-sm position-relative mt-5" style="width: 300px; border-radius: 15px; z-index: 1; overflow: hidden;">
+  <div class="card text-center p-4 shadow-sm position-relative mt-5"
+    style="width: 300px; border-radius: 15px; z-index: 1; overflow: hidden;">
 
-    <img
-      [src]="'http://openweathermap.org/img/wn/' + getCityAtHome().weather[0].icon + '@2x.png'"
-      alt="Decor top-left"
-      class="position-absolute opacity-10"
-      style="top: -10px; left: -10px; width: 80px; height: 80px; z-index: 0;"
-    />
+    <img [src]="'http://openweathermap.org/img/wn/' + getCityAtHome().weather[0].icon + '@2x.png'" alt="Decor top-left"
+      class="position-absolute opacity-10" style="top: -10px; left: -10px; width: 80px; height: 80px; z-index: 0;" />
 
-    <img
-      [src]="'http://openweathermap.org/img/wn/' + getCityAtHome().weather[0].icon + '@2x.png'"
-      alt="Decor bottom-right"
-      class="position-absolute opacity-10"
-      style="bottom: -10px; right: -10px; width: 80px; height: 80px; z-index: 0;"
-    />
+    <img [src]="'http://openweathermap.org/img/wn/' + getCityAtHome().weather[0].icon + '@2x.png'"
+      alt="Decor bottom-right" class="position-absolute opacity-10"
+      style="bottom: -10px; right: -10px; width: 80px; height: 80px; z-index: 0;" />
 
     <h5 class="card-title mb-3">Weather Info</h5>
     <h3 class="mb-1">{{ getCityAtHome().name }}</h3>
@@ -26,9 +21,13 @@
     </p>
 
     <p class="mb-1"><strong>Feels like:</strong> {{ getCityAtHome().main.feels_like | temp}}</p>
-    <p class="mb-1"><strong>Min:</strong> {{ getCityAtHome().main.temp_min | temp}} / <strong>Max:</strong> {{ getCityAtHome().main.temp_max | temp}}</p>
+    <p class="mb-1"><strong>Min:</strong> {{ getCityAtHome().main.temp_min | temp}} / <strong>Max:</strong> {{
+      getCityAtHome().main.temp_max | temp}}</p>
     <p class="mb-1"><strong>Humidity:</strong> {{ getCityAtHome().main.humidity }}%</p>
     <p class="mb-0"><strong>Wind:</strong> {{ (getCityAtHome().wind.speed * 3.6).toFixed(0) }} km/h</p>
 
   </div>
 </div>
+} @else {
+<h1 class="text-center mt-5">No main city added yet. You should search for one!</h1>
+}
