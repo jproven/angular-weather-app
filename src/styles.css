@@ -16,6 +16,10 @@ body, p, span, input, button {
   font-family: 'Roboto', sans-serif;
 }
 
+header {
+  background-color: transparent !important; 
+}
+
 .favorite-icon {
   fill: gold;
   transition: fill 0.2s ease;
@@ -24,3 +28,45 @@ body, p, span, input, button {
 .favorite-btn:hover .favorite-icon {
   fill: white;
 }
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #0f0f0f !important;       
+  color: #eee;           
+  border-bottom: none !important;
+  box-shadow: none !important;       
+}
+
+body.dark-mode .navbar a,
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar-brand {
+  color: #ffffff;                
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar .nav-link:hover {
+  color: #787676;                 
+}
+
+body.dark-mode .card {
+  background-color: #565656 !important;
+  color: #ffffff;
+  border-color: #cacaca;
+}
+
+body.dark-mode .list-group li {
+  background-color: #565656 !important;
+  color: #ffffff;
+  border-color: #cacaca;
+}
+
+body.dark-mode .btn-outline-primary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+
