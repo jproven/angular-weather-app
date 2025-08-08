@@ -20,7 +20,7 @@ It allows users to search for cities, view current weather conditions, and manag
 - [Angular](https://angular.io/) – Frontend framework.
 - [Bootstrap](https://getbootstrap.com/) – UI styling.
 - [OpenWeather API](https://openweathermap.org/api) – Weather data source.
-- TypeScript, HTML, SCSS.
+- TypeScript, HTML, CSS.
 
 ---
 
