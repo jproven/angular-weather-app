@@ -38,6 +38,7 @@ It allows users to search for cities, view current weather conditions, and manag
    ```
 
 3. **API Key Setup**
+   
    3.1. This application requires an API key from OpenWeather. Once you have your API key, open:
    ```bash
    src/environments/environment.development.ts
