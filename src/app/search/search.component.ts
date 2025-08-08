@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { CitiesService } from '../cities.service';
-import { DataApiService } from '../data-api.service';
-import { CountryCodePipe } from '../country-code.pipe';
+import { CitiesService } from '../services/cities.service';
+import { DataApiService } from '../services/data-api.service';
+import { CountryCodePipe } from '../pipes/country-code.pipe';
+import { TempPipe } from '../pipes/temp.pipe';
 
 @Component({
   selector: 'app-search',
-  imports: [ CountryCodePipe ],
+  imports: [ CountryCodePipe, TempPipe ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
@@ -33,6 +34,10 @@ export class SearchComponent {
 
   addCity(city: any) {
     this.citiesService.addCity(city);
+  }
+
+  removeCity(city: any) {
+    this.citiesService.removeCity(city);
   }
 
 }

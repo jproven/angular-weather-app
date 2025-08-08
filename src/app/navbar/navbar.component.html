@@ -1,14 +1,34 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" routerLink="/home">ClimaX</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMinimal"
+      aria-controls="navbarMinimal" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    @if (isDarkMode) {
+    <button (click)="toggleDarkMode()" class="btn btn-outline-warning" title="Switch to light mode">
+      <i>🌞</i>
+    </button>
+    } @else {
+    <button (click)="toggleDarkMode()" class="btn btn-outline-dark" title="Switch to dark mode">
+      <i>🌙</i>
+    </button>
+    }
+
+    <div class="collapse navbar-collapse" id="navbarMinimal">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" routerLink="/search" routerLinkActive="active">Search</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" routerLink="/manage" routerLinkActive="active">Manage</a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
